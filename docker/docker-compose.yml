@@ -1,0 +1,13 @@
+services:
+  app-backend:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: app-backend
+    ports:
+      - "${APP_PORT}:${APP_PORT}"
+    command: "uvicorn --factory app.core.main:create_app --reload --host ${APP_HOST} --port ${APP_PORT}"
+    env_file:
+      - ../.env
+    volumes:
+      - ../:/app/
