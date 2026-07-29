@@ -11,6 +11,7 @@ ruff = "^0.16.0"
 fastapi = "^0.140.13"
 mypy = "^2.3.0"
 pydantic-settings = "^2.14.2"
+uvicorn = {extras = ["all"], version = "^0.52.0"}
 
 
 [build-system]
@@ -57,3 +58,6 @@ warn_unused_ignores = true
 warn_redundant_casts = true
 warn_return_any = true
 warn_unreachable = true
+
+[tool.ruff.format]
+quote-style = "single"
