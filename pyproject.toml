@@ -12,7 +12,14 @@ fastapi = "^0.140.13"
 mypy = "^2.3.0"
 pydantic-settings = "^2.14.2"
 uvicorn = {extras = ["all"], version = "^0.52.0"}
+aiobotocore = "^3.8.0"
+python-multipart = "^0.0.32"
+mammoth = "^1.12.0"
+ollama = "^0.6.2"
 
+
+[tool.poetry.group.dev.dependencies]
+boto3-stubs = {extras = ["botocore", "s3"], version = "^1.43.64"}
 
 [build-system]
 requires = ["poetry-core"]
@@ -58,6 +65,13 @@ warn_unused_ignores = true
 warn_redundant_casts = true
 warn_return_any = true
 warn_unreachable = true
+plugins = ["pydantic.mypy"]
 
 [tool.ruff.format]
 quote-style = "single"
+
+[[tool.mypy.overrides]]
+module = [
+    "aiobotocore.*",
+]
+ignore_missing_imports = true
