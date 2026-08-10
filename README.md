@@ -4,11 +4,11 @@ A lightweight FastAPI service for managing document processing using MinIO (S3) 
 
 ### Tech Stack
 ---
-Framework: FastAPI
-AI Engine: Ollama (llama3.2:3b)
-Storage: MinIO (aiobotocore)
-Parsers: mammoth (DOCX parsing)
-Environment: Python 3.12+ / Poetry
+- FastAPI
+- Ollama (llama3.2:3b)
+- MinIO (aiobotocore)
+- mammoth (DOCX parsing)
+- Python 3.12+ / Poetry
 
 ### Quick Start
 ---
